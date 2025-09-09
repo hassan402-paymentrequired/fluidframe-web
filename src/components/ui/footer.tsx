@@ -1,10 +1,10 @@
-import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Facebook, href: "#", label: "GitHub" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
@@ -23,10 +23,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              TechFlow
+              Ahadsons Limited
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Transforming businesses through innovative technology solutions and digital excellence.
+              Transforming businesses through innovative technology solutions
+              and digital excellence.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => {
@@ -68,15 +69,19 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>hello@techflow.com</span>
+                <span>hello@Ahadsonslimited@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+234 803 335 3397</span>
+                <span>+234 702 594 9591</span>
+                
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>123 Tech Street, Silicon Valley</span>
+                <span>
+                  Address: VGi Centre, Okonjo Iweala Way, Utako District, Abuja.
+                </span>
               </div>
             </div>
           </div>
@@ -85,15 +90,16 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Stay Updated</h4>
             <p className="text-muted-foreground text-sm mb-4">
-              Subscribe to our newsletter for the latest tech insights and updates.
+              Subscribe to our newsletter for the latest tech insights and
+              updates.
             </p>
-            <div className="flex space-x-2">
+            <div className="relative">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-secondary/50 border border-border/50 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
+                className="px-3 py-2 bg-secondary/50 border border-border/50 rounded-full text-sm focus:outline-none focus:border-primary transition-colors w-full"
               />
-              <button className="px-4 py-2 bg-gradient-primary text-primary-foreground rounded-lg text-sm font-medium hover:shadow-glow transition-all">
+              <button className="absolute right-1 top-1/2 transform -translate-y-1/2 px-2 py-2 bg-gradient-primary text-primary-foreground rounded-full text-xs font-medium hover:shadow-glow transition-all">
                 Subscribe
               </button>
             </div>
@@ -103,7 +109,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/30 mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} TechFlow. All rights reserved. Built with passion for innovation.
+            © {currentYear} Ahadsons Limited. All rights reserved. Built with
+            passion for innovation.
           </p>
         </div>
       </div>

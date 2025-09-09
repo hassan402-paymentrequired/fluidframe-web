@@ -7,22 +7,18 @@ import About from "@/components/sections/About";
 import Team from "@/components/sections/Team";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/ui/footer";
+import MainLayout from "@/layout/main-layout";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <main>
-        <Hero />
-        <Services />
-        <WhyChooseUs />
-        <Projects />
-        <About />
-        <Team />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <MainLayout>
+      <Hero />
+      <Services />
+      <WhyChooseUs />
+      <Projects />
+      <Team />
+      <Contact />
+    </MainLayout>
   );
 };
 

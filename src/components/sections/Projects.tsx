@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Button } from "../ui/button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,8 +18,8 @@ const Projects = () => {
       title: "E-Commerce Platform",
       category: "Full-Stack Development",
       description: "A comprehensive e-commerce solution with advanced analytics, inventory management, and multi-vendor support.",
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
+      technologies: ["React", "Node.js", "PostgreSQL"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
       metrics: {
         users: "50K+",
         performance: "99.9%",
@@ -31,7 +32,7 @@ const Projects = () => {
       title: "FinTech Mobile App",
       category: "Mobile Development",
       description: "Secure mobile banking application with real-time transactions, budget tracking, and investment tools.",
-      technologies: ["React Native", "TypeScript", "Firebase", "Blockchain"],
+      technologies: ["React Native", "Firebase", "Blockchain"],
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop",
       metrics: {
         downloads: "100K+",
@@ -42,52 +43,10 @@ const Projects = () => {
       link: "#"
     },
     {
-      title: "Healthcare Management System",
-      category: "Enterprise Solution",
-      description: "Complete healthcare management platform with patient records, appointment scheduling, and telemedicine features.",
-      technologies: ["Vue.js", "Python", "Django", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
-      metrics: {
-        hospitals: "25+",
-        patients: "10K+",
-        efficiency: "+40%"
-      },
-      status: "In Development",
-      link: "#"
-    },
-    {
-      title: "AI-Powered Analytics Dashboard",
-      category: "Data Analytics",
-      description: "Intelligent business analytics platform with machine learning insights and predictive modeling.",
-      technologies: ["React", "Python", "TensorFlow", "MongoDB"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
-      metrics: {
-        accuracy: "95%",
-        processing: "Real-time",
-        insights: "1000+"
-      },
-      status: "Live",
-      link: "#"
-    },
-    {
-      title: "Smart IoT Platform",
-      category: "IoT Development",
-      description: "Comprehensive IoT platform for smart city management with sensor networks and real-time monitoring.",
-      technologies: ["Angular", "Node.js", "InfluxDB", "MQTT"],
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop",
-      metrics: {
-        devices: "5K+",
-        uptime: "99.8%",
-        cities: "12"
-      },
-      status: "Live",
-      link: "#"
-    },
-    {
       title: "Educational Learning Platform",
       category: "EdTech Solution",
       description: "Interactive learning management system with video conferencing, assessment tools, and progress tracking.",
-      technologies: ["Next.js", "Node.js", "WebRTC", "Redis"],
+      technologies: ["Next.js", "WebRTC", "Redis"],
       image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=400&h=250&fit=crop",
       metrics: {
         students: "25K+",
@@ -161,11 +120,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card key={index} className="feature-card group cursor-pointer overflow-hidden">
               {/* Project Image */}
-              <div className="relative overflow-hidden mb-6">
+              <div className="relative overflow-hidden mb-3">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full rounded-md h-48 object-cover transition-transform duration-300 "
                 />
                 <div className="absolute top-4 left-4">
                   <Badge 
@@ -188,7 +147,7 @@ const Projects = () => {
               </div>
 
               {/* Project Content */}
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <div>
                   <div className="text-sm text-primary font-medium mb-1">{project.category}</div>
                   <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -219,16 +178,12 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* CTA */}
-                <div className="pt-4">
-                  <a 
-                    href={project.link}
-                    className="inline-flex items-center text-sm text-primary hover:text-primary-glow transition-colors group/link"
+                  <Button
+                  className="w-full mt-2"
                   >
                     View Project
                     <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover/link:translate-x-1" />
-                  </a>
-                </div>
+                  </Button>
               </div>
             </Card>
           ))}
@@ -241,7 +196,7 @@ const Projects = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-primary text-primary-foreground rounded-lg hover:shadow-glow transition-all duration-300 font-semibold"
+            className="inline-flex text-sm items-center px-8 py-2 bg-gradient-primary text-primary-foreground rounded-md hover:shadow-glow transition-all duration-300 font-semibold"
           >
             View All Projects
             <ArrowRight className="ml-2 h-5 w-5" />
