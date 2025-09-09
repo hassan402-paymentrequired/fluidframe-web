@@ -86,6 +86,13 @@ const Hero = () => {
       {/* Background decorative elements */}
       <div className="hero-bg"></div>
       
+      {/* Company Logo Background */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+        <div className="text-[20rem] md:text-[30rem] font-bold text-primary select-none">
+          TF
+        </div>
+      </div>
+      
       {/* Floating decorative orbs */}
       <div ref={floatingRef} className="absolute top-20 right-20 w-32 h-32 bg-primary/20 rounded-full blur-xl animate-float hidden lg:block"></div>
       <div className="absolute bottom-20 left-20 w-24 h-24 bg-primary-glow/20 rounded-full blur-xl animate-float hidden lg:block" style={{ animationDelay: "2s" }}></div>
